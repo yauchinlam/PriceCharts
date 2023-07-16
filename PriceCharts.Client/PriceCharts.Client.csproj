@@ -16,4 +16,8 @@
     <Folder Include="Pages\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PriceChart.Common\PriceChart.Common.csproj" />
+  </ItemGroup>
+
 </Project>
