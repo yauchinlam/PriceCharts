@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceCharts.Client", "PriceCharts.Client\PriceCharts.Client.csproj", "{8FE17B66-DD8D-4122-A002-F29C74326FC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceChart.Common", "PriceChart.Common\PriceChart.Common.csproj", "{A7F8C5F1-27B3-4239-93CB-52180C7E7D2B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{8FE17B66-DD8D-4122-A002-F29C74326FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FE17B66-DD8D-4122-A002-F29C74326FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FE17B66-DD8D-4122-A002-F29C74326FC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7F8C5F1-27B3-4239-93CB-52180C7E7D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7F8C5F1-27B3-4239-93CB-52180C7E7D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7F8C5F1-27B3-4239-93CB-52180C7E7D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7F8C5F1-27B3-4239-93CB-52180C7E7D2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
