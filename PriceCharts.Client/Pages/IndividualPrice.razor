@@ -1,0 +1,23 @@
+﻿@page "/price/{item}"
+@inject IPriceService priceService
+@if(isLoading)
+{
+	
+}
+else
+{
+	
+}
+
+@code {
+	[Parameter]
+	public string? item { get; set; }
+	private HttpClient apiClient;
+	private bool isLoading = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		
+	}
+
+}

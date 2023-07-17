@@ -1,0 +1,41 @@
+﻿@page "/prices"
+@inject IPriceService _priceService
+
+@if (IsProcessing)
+{
+	<div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
+		<img src="images/ajax-loader.gif" />
+	</div>
+}
+else
+{
+	<div class="container">
+		<div class="row  pb-3 pt-3 backgroundWhite">
+			@foreach (var price in listprices)
+			{
+				@using Syncfusion.Blazor.Charts
+
+				<SfChart Title="price.Name">
+					<ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+					<ChartSeriesCollection>
+						<ChartSeries DataSource="@price.priceAtTime" XName="Dates" YName="PriceAtTime" Type="ChartSeriesType.Line">
+						</ChartSeries>
+					</ChartSeriesCollection>
+				</SfChart>
+			}
+		</div>
+	</div>
+}
+@code {
+	public bool IsProcessing { get; set; } = false;
+	public IEnumerable<PriceModelDTO> listprices { get; set; } = new List<PriceModelDTO>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		IsProcessing = true;
+		listprices = await _priceService.GetTop10();
+		IsProcessing = false;
+	}
+}
+
